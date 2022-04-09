@@ -4,12 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Button;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -18,9 +20,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
+public class RegisterActivity extends AppCompatActivity {
     private EditText editTextEmail, editTextPassword, editTextConfirmPassword,editTextFullName;
     private Button signupButton;
+    private TextView loginLink;
     private FirebaseAuth mAuth;
 
     @Override
@@ -33,17 +36,20 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         editTextConfirmPassword = (EditText) findViewById(R.id.registerconfirmpassword);
         signupButton = (Button) findViewById(R.id.signupbutton);
         editTextFullName = (EditText) findViewById(R.id.registerfullname);
-        signupButton.setOnClickListener(this);
-
-    }
-
-    @Override
-    public void onClick(View v){
-        switch(v.getId()){
-            case R.id.signupbutton:
+        loginLink = (TextView) findViewById(R.id.registerloginbutton);
+        signupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 registerUser();
-                break;
-        }
+            }
+        });
+        loginLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void registerUser(){
@@ -82,8 +88,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
         }
 
-
-
         mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -108,6 +112,5 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 }
             }
         });
-
     }
 }

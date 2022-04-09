@@ -10,7 +10,7 @@
         android:id="@+id/registerfullname"
         android:layout_width="315dp"
         android:layout_height="56dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="60dp"
         android:contentDescription="Full Name"
         android:ems="10"
         android:hint="Full Name"
@@ -42,7 +42,7 @@
         android:id="@+id/registerpassword"
         android:layout_width="317dp"
         android:layout_height="45dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -55,7 +55,7 @@
         android:id="@+id/registeremail"
         android:layout_width="315dp"
         android:layout_height="56dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:contentDescription="Email"
         android:ems="10"
         android:hint="Email"
@@ -70,7 +70,7 @@
         android:id="@+id/registerconfirmpassword"
         android:layout_width="314dp"
         android:layout_height="44dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:hint="Confirm Password"
         android:inputType="textPassword"
@@ -79,15 +79,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registerpassword" />
 
+    <TextView
+        android:id="@+id/hasanaccounttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Already has an account?"
+        app:layout_constraintStart_toStartOf="@+id/registerconfirmpassword"
+        app:layout_constraintTop_toBottomOf="@+id/registerconfirmpassword" />
+
+    <TextView
+        android:id="@+id/registerloginbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="login"
+        android:textColor="@color/purple_500"
+        app:layout_constraintStart_toEndOf="@+id/hasanaccounttext"
+        app:layout_constraintTop_toTopOf="@+id/hasanaccounttext" />
+
     <Button
         android:id="@+id/signupbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:text="Register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registerconfirmpassword" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
