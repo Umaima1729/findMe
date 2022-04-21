@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -14,8 +15,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FindMe">
         <activity
+            android:name=".EmergencyContactsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeScreenActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,6 +33,7 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyA2OmhJLwxM5obW7sa_S0feTuegMkP6FMU" />
+
         <activity
             android:name=".MapsActivity"
             android:exported="false"
@@ -37,7 +45,7 @@
             android:theme="@style/Theme.FindMe.NoActionBar" />
         <activity
             android:name=".RegisterActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="false"
