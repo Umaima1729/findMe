@@ -22,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
                     return;
                 }
                 if(mAuth.getCurrentUser()!=null){
-                    Intent intent = new Intent(getApplicationContext(),MapsActivity.class);
+                    Intent intent = new Intent(getApplicationContext(),HomeScreenActivity.class);
                     startActivity(intent);
                 }else{
                     Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
