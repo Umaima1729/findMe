@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "524378007804",
-    "project_id": "findme-5d9cb",
-    "storage_bucket": "findme-5d9cb.appspot.com"
+    "project_number": "417064105014",
+    "project_id": "findme-3ef58",
+    "storage_bucket": "findme-3ef58.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:524378007804:android:3f87b1a03934a78389cf79",
+        "mobilesdk_app_id": "1:417064105014:android:5d7a3c1d4b4d4b24771497",
         "android_client_info": {
           "package_name": "com.example.findme"
         }
       },
       "oauth_client": [
         {
-          "client_id": "524378007804-e9f92kqmuoq1ao3h541fl430el9cpegb.apps.googleusercontent.com",
+          "client_id": "417064105014-nafvp1tier19s5p12iae2bve8lgsr3r7.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBhR2vYJrQztzMSFAXVdGBBzZtgmkFEjow"
+          "current_key": "AIzaSyDj97S0f8CjCnQR6eP8NLonMRCdhDegS9s"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "524378007804-e9f92kqmuoq1ao3h541fl430el9cpegb.apps.googleusercontent.com",
+              "client_id": "417064105014-nafvp1tier19s5p12iae2bve8lgsr3r7.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
